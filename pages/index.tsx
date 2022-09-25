@@ -8,7 +8,6 @@ import SvgForm from 'components/SvgForm';
 const defaultValues: SvgData = {
   text: 'New Year',
   date: new Date('2023-01-01').toISOString().substring(0, 10),
-  subText: '2023-01-01',
 };
 
 const Home: NextPage = () => {

@@ -22,7 +22,6 @@ function SvgForm({ defaultValues, onChange }: Props) {
         onChange({
           text: text || '',
           date: date || '',
-          subText: date || '',
         }),
       defaultValues,
     );
