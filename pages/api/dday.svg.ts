@@ -2,9 +2,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createSvg } from 'utils/dday';
 
-const getDaysDiffBetweenDates = (dateInitial: Date, dateFinal: Date) =>
-  (dateFinal.getTime() - dateInitial.getTime()) / (1000 * 3600 * 24);
-
 type Data = {
   name: string;
 };

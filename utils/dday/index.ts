@@ -77,7 +77,7 @@ export const createSvg = ({ date, text }: SvgData) => {
     text-anchor="middle">${text}</text>
 <text x="50%" y="50%" fill="white" font-size="48" font-family="Inter" dominant-baseline="middle"
     text-anchor="middle">${ddayText}</text>
-<text x="50%" y="150" fill="white" font-size="16" font-family="Inter" dominant-baseline="middle"
+<text x="50%" y="160" fill="white" font-size="16" font-family="Inter" dominant-baseline="middle"
 text-anchor="middle">${date}</text>
 </svg>`;
 
