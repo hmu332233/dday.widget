@@ -14,7 +14,11 @@ const Home: NextPage = () => {
   const [data, setData] = useState<SvgData>(defaultValues);
   return (
     <Layout>
-      <p>디데이가 계산되는 이미지를 Github, Notion 등에 넣어보세요!</p>
+      <p>
+        Add Countdowns to anywhere,
+        <br />
+        such as your Github, Notion, etc
+      </p>
       <SvgPreview data={data} />
       <SvgForm defaultValues={defaultValues} onChange={setData} />
     </Layout>
