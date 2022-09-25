@@ -3,10 +3,11 @@ import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 
 type Props = {
+  defaultValues: SvgData;
   onChange: (v: SvgData) => void;
 };
 
-function SvgForm({ onChange }: Props) {
+function SvgForm({ defaultValues, onChange }: Props) {
   const {
     register,
     handleSubmit,
@@ -16,12 +17,9 @@ function SvgForm({ onChange }: Props) {
   const onSubmit: SubmitHandler<SvgData> = (data) => console.log(data);
 
   useEffect(() => {
-    const subscription = watch((values) => onChange(values), {
-      date: new Date().toISOString().substring(0, 10),
-      text: 'New Year',
-    });
+    const subscription = watch((values) => onChange(values), defaultValues);
     return () => subscription.unsubscribe();
-  }, [watch, onChange]);
+  }, [watch, defaultValues, onChange]);
 
   return (
     <form
@@ -35,7 +33,7 @@ function SvgForm({ onChange }: Props) {
         <input
           type="date"
           className="input input-bordered"
-          defaultValue={new Date().toISOString().substring(0, 10)}
+          defaultValue={defaultValues.date}
           {...register('date', { required: true })}
         />
       </div>
@@ -46,7 +44,7 @@ function SvgForm({ onChange }: Props) {
         <input
           type="text"
           className="input input-bordered"
-          defaultValue="New Year"
+          defaultValue={defaultValues.text}
           {...register('text', { required: true })}
         />
       </div>
