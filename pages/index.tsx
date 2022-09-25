@@ -8,6 +8,7 @@ import SvgForm from 'components/SvgForm';
 const defaultValues: SvgData = {
   text: 'New Year',
   date: new Date('2023-01-01').toISOString().substring(0, 10),
+  subText: '2023-01-01',
 };
 
 const Home: NextPage = () => {
@@ -16,10 +17,7 @@ const Home: NextPage = () => {
     <Layout>
       <p>디데이가 계산되는 이미지를 Github, Notion 등에 넣어보세요!</p>
       <SvgPreview data={data} />
-      <SvgForm
-        defaultValues={defaultValues}
-        onChange={(v: SvgData) => setData(v)}
-      />
+      <SvgForm defaultValues={defaultValues} onChange={setData} />
     </Layout>
   );
 };

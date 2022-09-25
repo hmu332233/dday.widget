@@ -7,7 +7,7 @@ type Props = {
 const getDaysDiffBetweenDates = (dateInitial: Date, dateFinal: Date) =>
   Math.ceil((dateFinal.getTime() - dateInitial.getTime()) / (1000 * 3600 * 24));
 
-function SvgPreview({ data: { date, text } }: Props) {
+function SvgPreview({ data: { date, text, subText } }: Props) {
   const dday =
     getDaysDiffBetweenDates(new Date(date as string), new Date()) - 1 || '-Day';
 
@@ -50,7 +50,7 @@ function SvgPreview({ data: { date, text } }: Props) {
         dominant-baseline="middle"
         text-anchor="middle"
       >
-        Days
+        {subText}
       </text>
     </svg>
   );

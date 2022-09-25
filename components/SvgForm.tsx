@@ -17,7 +17,15 @@ function SvgForm({ defaultValues, onChange }: Props) {
   const onSubmit: SubmitHandler<SvgData> = (data) => console.log(data);
 
   useEffect(() => {
-    const subscription = watch((values) => onChange(values), defaultValues);
+    const subscription = watch(
+      ({ text, date }) =>
+        onChange({
+          text: text || '',
+          date: date || '',
+          subText: date || '',
+        }),
+      defaultValues,
+    );
     return () => subscription.unsubscribe();
   }, [watch, defaultValues, onChange]);
 
