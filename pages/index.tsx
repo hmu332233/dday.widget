@@ -2,8 +2,10 @@ import { useState } from 'react';
 import type { NextPage } from 'next';
 
 import Layout from 'components/Layout';
-import SvgPreview from 'components/SvgPreview';
+// import SvgPreview from 'components/SvgPreview';
 import SvgForm from 'components/SvgForm';
+import dynamic from 'next/dynamic';
+const SvgPreview = dynamic(() => import('components/SvgPreview'));
 
 const defaultValues: SvgData = {
   text: 'New Year',
