@@ -1,6 +1,19 @@
-import React, { useId } from 'react';
+import React from 'react';
 
 const ID = 'Drawer';
+
+/**
+ * @example
+ * <Drawer>
+ *   <Drawer.Content>
+ *      <!-- Page content here -->
+ *     <Drawer.Button>Open Drawer</Drawer.Button>
+ *   </Drawer.Content>
+ *   <Drawer.Side>
+ *     <!-- Sidebar content here -->
+ *   </Drawer.Side>
+ * </Drawer>
+ */
 
 type DrawerProps = {
   children: React.ReactNode;
