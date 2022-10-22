@@ -5,7 +5,7 @@ const nextConfig = {
   rewrites: async () => {
     return [
       {
-        source: '/dday.svg',
+        source: '/widget',
         destination: '/api/dday.svg',
       },
     ];
