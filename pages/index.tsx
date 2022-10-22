@@ -5,6 +5,8 @@ import dynamic from 'next/dynamic';
 import Layout from 'components/Layout';
 import SvgForm from 'components/SvgForm';
 import SvgSkelton from 'components/SvgSkelton';
+import Drawer from 'components/Drawer';
+import UsageView from 'components/UsageView';
 const SvgPreview = dynamic(() => import('components/SvgPreview'), {
   loading: () => <SvgSkelton />,
   ssr: false,
@@ -18,15 +20,23 @@ const defaultValues: SvgData = {
 const Home: NextPage = () => {
   const [data, setData] = useState<SvgData>(defaultValues);
   return (
-    <Layout>
-      <p>
-        Add Countdowns to anywhere,
-        <br />
-        such as your Github, Notion, etc
-      </p>
-      <SvgPreview data={data} />
-      <SvgForm defaultValues={defaultValues} onChange={setData} />
-    </Layout>
+    <Drawer>
+      <Drawer.Content>
+        <Layout>
+          <p className="text-center">
+            Add D-Day widget to anywhere,
+            <br />
+            such as your Github Profile, Notion, etc
+          </p>
+          <SvgPreview data={data} />
+          <SvgForm defaultValues={defaultValues} onChange={setData} />
+          <Drawer.Button>Add Widget</Drawer.Button>
+        </Layout>
+      </Drawer.Content>
+      <Drawer.Side>
+        <UsageView data={data} />
+      </Drawer.Side>
+    </Drawer>
   );
 };
 

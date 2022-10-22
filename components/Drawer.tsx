@@ -40,8 +40,8 @@ type SideProps = {
 function Side({ children }: SideProps) {
   return (
     <div className="drawer-side">
-      <label htmlFor={ID} className="drawer-overlay" />
-      <div className="p-4 overflow-y-auto w-1/2 bg-base-100 text-base-content">
+      <label htmlFor={ID} className="drawer-overlay opacity-0" />
+      <div className="px-8 py-6 overflow-y-auto max-w-xl w-full bg-base-100 text-base-content">
         {children}
       </div>
     </div>
