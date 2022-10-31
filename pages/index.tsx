@@ -7,6 +7,7 @@ import SvgForm from 'components/SvgForm';
 import SvgSkelton from 'components/SvgSkelton';
 import Drawer from 'components/Drawer';
 import UsageView from 'components/UsageView';
+import Hits from 'components/Hits';
 const SvgPreview = dynamic(() => import('components/SvgPreview'), {
   loading: () => <SvgSkelton />,
   ssr: false,
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
             <br />
             such as your Github Profile, Notion, etc
           </p>
+          <Hits />
           <SvgPreview data={data} />
           <SvgForm defaultValues={defaultValues} onChange={setData} />
           <Drawer.Button>Add Widget</Drawer.Button>
