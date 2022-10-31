@@ -10,7 +10,15 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
 ) {
-  const { date, text = '' } = req.query;
+  const { keyword = '' } = req.query;
+  let { date, text = '' } = req.query;
+
+  switch (keyword) {
+    case 'new-year':
+      text = 'New Year 🙂';
+      date = '2023-01-01';
+    default:
+  }
 
   const svg = createSvg({ date: date as string, text: text as string });
   res.setHeader('Content-Type', 'image/svg+xml');
