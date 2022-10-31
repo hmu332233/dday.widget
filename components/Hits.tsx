@@ -4,8 +4,8 @@ type Props = {};
 
 function Hits({}: Props) {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
     <a href="https://hits.seeyoufarm.com">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         width="96"
         height="20"
