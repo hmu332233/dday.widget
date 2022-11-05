@@ -2,6 +2,9 @@
   <a href="https://dday-widget.minung.dev">
     <img src="https://dday-widget.minung.dev/widget?text=D-Day.Widget&date=2022-10-22" alt="dday-widget.svg" />
   </a>
+    <a href="https://dday-widget.minung.dev">
+    <img src="https://dday-widget.minung.dev/widget?keyword=new-year" alt="dday-widget.svg" />
+  </a>
   <br /><br />
   <p align="center">
     Add D-Day widget to anywhere,<br />    
