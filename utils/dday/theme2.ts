@@ -48,7 +48,7 @@ const createSvg = ({ date, text }: SvgData) => {
             position: absolute;
             left: 0;
             height: 100%;
-            background-color: #ec4899
+            background-color: #67c287;
           }
         </style>
         <div class="card">
