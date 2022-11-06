@@ -14,7 +14,7 @@ export type SvgData = {
   [FORM_ITEM.THEME]?: Theme;
 };
 
-export const THEMES = ['theme1', 'theme2'] as const;
+export const THEMES = ['theme1', 'theme2', 'theme3'] as const;
 export type Theme = typeof THEMES[number];
 
 export type CreateSvgFunc = (svgData: SvgData) => string;

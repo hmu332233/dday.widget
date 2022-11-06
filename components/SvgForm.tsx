@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SvgData, FormItem, Theme } from 'types';
+import { SvgData, FormItem, Theme, THEMES } from 'types';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 
@@ -11,6 +11,7 @@ type Props = {
 const formItemsMap: { [key in Theme]: FormItem[] } = {
   theme1: ['theme', 'date', 'text'],
   theme2: ['theme', 'startDate', 'date', 'text'],
+  theme3: ['theme', 'date', 'text'],
 };
 
 function SvgForm({ defaultValues, onChange }: Props) {
@@ -50,8 +51,11 @@ function SvgForm({ defaultValues, onChange }: Props) {
           {...register('theme', { required: true })}
         >
           {/* <option disabled selected>Pick your favorite Simpson</option> */}
-          <option value="theme1">theme1</option>
-          <option value="theme2">theme2</option>
+          {THEMES.map((theme) => (
+            <option key={theme} value={theme}>
+              {theme}
+            </option>
+          ))}
         </select>
       </div>
     ),
