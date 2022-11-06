@@ -9,6 +9,7 @@ import SvgSkelton from 'components/SvgSkelton';
 import Drawer from 'components/Drawer';
 import UsageView from 'components/UsageView';
 import Hits from 'components/Hits';
+import Adfit from 'components/Adfit';
 const SvgPreview = dynamic(() => import('components/SvgPreview'), {
   // loading: () => <SvgSkelton />,
   ssr: false,
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
           <SvgPreview data={data} />
           <SvgForm defaultValues={defaultValues} onChange={setData} />
           <Drawer.Button>Add Widget</Drawer.Button>
+          <Adfit />
         </Layout>
       </Drawer.Content>
       <Drawer.Side>
