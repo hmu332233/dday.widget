@@ -1,9 +1,6 @@
 <div align="center">
   <a href="https://dday-widget.minung.dev">
-    <img src="https://dday-widget.minung.dev/widget?text=D-Day.Widget&date=2022-10-22" alt="dday-widget.svg" />
-  </a>
-    <a href="https://dday-widget.minung.dev">
-    <img src="https://dday-widget.minung.dev/widget?keyword=new-year" alt="dday-widget.svg" />
+    <img src="https://dday-widget.minung.dev/widget?keyword=new-year&theme=theme2" alt="dday-widget.svg" />
   </a>
   <br /><br />
   <p align="center">
@@ -43,7 +40,21 @@ https://dday-widget.minung.dev/widget?text=New Year&date=2023-01-01
 
 ## Roadmap
 
-- [ ] Add a theme feature (for multiple themes)
+- [x] Add a theme feature (for multiple themes)
+
+## Theme
+
+### Theme1
+
+<a href="https://dday-widget.minung.dev">
+  <img src="https://dday-widget.minung.dev/widget?keyword=new-year&theme=theme1" alt="dday-widget.svg" />
+</a>
+
+### Theme2
+
+<a href="https://dday-widget.minung.dev">
+  <img src="https://dday-widget.minung.dev/widget?keyword=new-year&theme=theme2" alt="dday-widget.svg" />
+</a>
 
 ## Contributing
 
