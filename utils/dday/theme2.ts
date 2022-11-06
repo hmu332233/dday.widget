@@ -1,7 +1,7 @@
 import { SvgData } from 'types';
 import { getDDayText, getDDayPercent } from 'utils/string';
 
-const createSvg = ({ date, text, startDate }: SvgData) => {
+const createSvg = ({ date, text, startDate = '' }: SvgData) => {
   const ddayText = getDDayText(date);
   const ddayPercent = getDDayPercent(startDate, date);
   const svg = `

@@ -19,10 +19,11 @@ function SvgForm({ defaultValues, onChange }: Props) {
 
   useEffect(() => {
     const subscription = watch(
-      ({ text, date, theme }) =>
+      ({ text, date, startDate, theme }) =>
         onChange({
-          text: text || '',
-          date: date || '',
+          text: text!,
+          date: date!,
+          startDate: startDate!,
           theme: theme || 'theme1',
         }),
       defaultValues,
@@ -41,6 +42,7 @@ function SvgForm({ defaultValues, onChange }: Props) {
         </label>
         <select
           className="select select-bordered w-full"
+          defaultValue={defaultValues.theme}
           {...register('theme', { required: true })}
         >
           {/* <option disabled selected>Pick your favorite Simpson</option> */}
@@ -50,7 +52,18 @@ function SvgForm({ defaultValues, onChange }: Props) {
       </div>
       <div className="form-control">
         <label className="label">
-          <span className="label-text">Date</span>
+          <span className="label-text">Start Date</span>
+        </label>
+        <input
+          type="date"
+          className="input input-bordered"
+          defaultValue={defaultValues.startDate}
+          {...register('startDate', { required: true })}
+        />
+      </div>
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">End Date</span>
         </label>
         <input
           type="date"

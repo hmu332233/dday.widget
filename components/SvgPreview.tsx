@@ -6,9 +6,11 @@ type Props = {
   data: SvgData;
 };
 
-function SvgPreview({ data: { date, text, theme = 'theme1' } }: Props) {
+function SvgPreview({
+  data: { date, text, startDate, theme = 'theme1' },
+}: Props) {
   const createSvg = createSvgFuncMap[theme as Theme];
-  const svg = createSvg({ date, text });
+  const svg = createSvg({ date, startDate, text });
   return <div dangerouslySetInnerHTML={{ __html: svg }} />;
 }
 

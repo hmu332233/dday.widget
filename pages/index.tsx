@@ -10,13 +10,15 @@ import Drawer from 'components/Drawer';
 import UsageView from 'components/UsageView';
 import Hits from 'components/Hits';
 const SvgPreview = dynamic(() => import('components/SvgPreview'), {
-  loading: () => <SvgSkelton />,
+  // loading: () => <SvgSkelton />,
   ssr: false,
 });
 
 const defaultValues: SvgData = {
+  theme: 'theme2',
   text: 'New Year',
   date: new Date('2023-01-01').toISOString().substring(0, 10),
+  startDate: new Date('2022-01-01').toISOString().substring(0, 10),
 };
 
 const Home: NextPage = () => {
