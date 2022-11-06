@@ -35,6 +35,6 @@ export default function handler(
     startDate: startDate as string,
   });
   res.setHeader('Content-Type', 'image/svg+xml');
-  // res.setHeader('Cache-Control', 's-maxage=3600, max-age=3600');
+  res.setHeader('Cache-Control', 's-maxage=300, max-age=300');
   res.status(200).end(svg);
 }
