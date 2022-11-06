@@ -20,7 +20,7 @@
 ```html
 <a href="https://dday-widget.minung.dev">
   <img
-    src="https://dday-widget.minung.dev/widget?text=New Year&date=2023-01-01"
+    src="https://dday-widget.minung.dev/widget?text=New Year&date=2023-01-01&theme=theme2"
     alt="dday-widget.svg"
   />
 </a>
@@ -29,13 +29,13 @@
 **Markdown Example**
 
 ```
-[![Moon.svg](https://dday-widget.minung.dev/widget?text=New Year&date=2023-01-01)](https://dday-widget.minung.dev)
+[![Moon.svg](https://dday-widget.minung.dev/widget?text=New Year&date=2023-01-01&)](https://dday-widget.minung.dev)
 ```
 
 **SVG Url (Notion)**
 
 ```
-https://dday-widget.minung.dev/widget?text=New Year&date=2023-01-01
+https://dday-widget.minung.dev/widget?text=New Year&date=2023-01-01&theme=theme2
 ```
 
 ## Roadmap
