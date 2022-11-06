@@ -1,11 +1,13 @@
 import React from 'react';
-import { createSvg } from 'utils/dday';
+import { SvgData, Theme } from 'types';
+import createSvgFuncMap from 'utils/dday';
 
 type Props = {
   data: SvgData;
 };
 
-function SvgPreview({ data: { date, text } }: Props) {
+function SvgPreview({ data: { date, text, theme = 'theme1' } }: Props) {
+  const createSvg = createSvgFuncMap[theme as Theme];
   const svg = createSvg({ date, text });
   return <div dangerouslySetInnerHTML={{ __html: svg }} />;
 }

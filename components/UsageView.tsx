@@ -2,6 +2,7 @@ import React from 'react';
 import CodeBox from 'components/CodeBox';
 
 import { objectToQueryString } from 'utils/string';
+import { SvgData } from 'types';
 
 type Props = {
   data: SvgData;

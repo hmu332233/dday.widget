@@ -1,6 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createSvg } from 'utils/dday';
+import { Theme } from 'types';
+// import { createSvg } from 'utils/dday';
+import createSvgFuncMap from 'utils/dday';
+import { isTheme } from 'utils/dday/utils';
 
 type Data = {
   name: string;
@@ -10,8 +13,14 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
 ) {
-  const { keyword = '' } = req.query;
+  const { keyword = '', theme = 'theme1' } = req.query;
   let { date, text = '' } = req.query;
+
+  if (!isTheme(theme)) {
+    return res.status(400).end('invalid theme');
+  }
+
+  const createSvg = createSvgFuncMap[theme as Theme];
 
   switch (keyword) {
     case 'new-year':

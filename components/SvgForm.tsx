@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { SvgData } from 'types';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 

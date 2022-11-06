@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
+import { SvgData } from 'types';
 import Layout from 'components/Layout';
 import SvgForm from 'components/SvgForm';
 import SvgSkelton from 'components/SvgSkelton';
