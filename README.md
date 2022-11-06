@@ -1,4 +1,5 @@
 <div align="center">
+  <h1>D-Day.<span style="color:orange;">widget</span></h1>
   <a href="https://dday-widget.minung.dev">
     <img src="https://dday-widget.minung.dev/widget?keyword=new-year&theme=theme2" alt="dday-widget.svg" />
   </a>
