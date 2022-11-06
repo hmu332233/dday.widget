@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react';
-import { SvgData } from 'types';
+import { SvgData, FormItem, Theme } from 'types';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 
 type Props = {
   defaultValues: SvgData;
   onChange: (v: SvgData) => void;
+};
+
+const formItemsMap: { [key in Theme]: FormItem[] } = {
+  theme1: ['theme', 'date', 'text'],
+  theme2: ['theme', 'startDate', 'date', 'text'],
 };
 
 function SvgForm({ defaultValues, onChange }: Props) {
@@ -31,11 +36,10 @@ function SvgForm({ defaultValues, onChange }: Props) {
     return () => subscription.unsubscribe();
   }, [watch, defaultValues, onChange]);
 
-  return (
-    <form
-      className="flex flex-col w-full max-w-xs"
-      onSubmit={handleSubmit(onSubmit)}
-    >
+  const theme = watch('theme', defaultValues.theme)!;
+
+  const formMap = {
+    theme: (
       <div className="form-control">
         <label className="label">
           <span className="label-text">Theme</span>
@@ -50,6 +54,8 @@ function SvgForm({ defaultValues, onChange }: Props) {
           <option value="theme2">theme2</option>
         </select>
       </div>
+    ),
+    startDate: (
       <div className="form-control">
         <label className="label">
           <span className="label-text">Start Date</span>
@@ -61,6 +67,8 @@ function SvgForm({ defaultValues, onChange }: Props) {
           {...register('startDate', { required: true })}
         />
       </div>
+    ),
+    date: (
       <div className="form-control">
         <label className="label">
           <span className="label-text">End Date</span>
@@ -72,6 +80,8 @@ function SvgForm({ defaultValues, onChange }: Props) {
           {...register('date', { required: true })}
         />
       </div>
+    ),
+    text: (
       <div className="form-control">
         <label className="label">
           <span className="label-text">Text</span>
@@ -83,6 +93,15 @@ function SvgForm({ defaultValues, onChange }: Props) {
           {...register('text', { required: true })}
         />
       </div>
+    ),
+  };
+
+  return (
+    <form
+      className="flex flex-col w-full max-w-xs"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      {formItemsMap[theme].map((itemKey) => formMap[itemKey])}
     </form>
   );
 }
