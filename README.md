@@ -46,6 +46,7 @@ https://dday-widget.minung.dev/widget?text=New Year&date=2023-01-01&theme=theme2
 
 - [x] Add a theme feature (for multiple themes)
 - [ ] Support dark theme
+- [ ] Support time locale
 
 ## Theme
 
