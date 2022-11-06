@@ -1,7 +1,7 @@
 <div align="center">
   <h1>D-Day.<span style="color:#66cc8a;">widget</span></h1>
   <a href="https://dday-widget.minung.dev">
-    <img src="https://dday-widget.minung.dev/widget?text=Open&date=2022-10-22&theme=theme2" alt="dday-widget.svg" />
+    <img src="https://dday-widget.minung.dev/widget?text=Open&date=2022-10-22&theme=theme3" alt="dday-widget.svg" />
   </a>
   <br />
   <a href="https://dday-widget.minung.dev">
