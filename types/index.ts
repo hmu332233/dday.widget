@@ -1,6 +1,7 @@
 export interface SvgData {
   text: string;
   date: string;
+  startDate?: string;
   theme?: Theme;
 }
 

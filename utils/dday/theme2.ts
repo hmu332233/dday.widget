@@ -1,8 +1,9 @@
 import { SvgData } from 'types';
-import { getDDayText } from 'utils/string';
+import { getDDayText, getDDayPercent } from 'utils/string';
 
-const createSvg = ({ date, text }: SvgData) => {
+const createSvg = ({ date, text, startDate }: SvgData) => {
   const ddayText = getDDayText(date);
+  const ddayPercent = getDDayPercent(startDate, date);
   const svg = `
   <svg fill="none" width="400" height="70" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
@@ -57,7 +58,7 @@ const createSvg = ({ date, text }: SvgData) => {
             <span class="text">${ddayText}</span>
           </div>
           <div class="progress">
-            <div class="progress-bar" style="width: 200px"></div>
+            <div class="progress-bar" style="width: ${ddayPercent}%"></div>
           </div>
         </div>
       </div>
