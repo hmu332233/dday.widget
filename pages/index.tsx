@@ -18,8 +18,8 @@ const SvgPreview = dynamic(() => import('components/SvgPreview'), {
 const defaultValues: SvgData = {
   theme: 'theme2',
   text: 'New Year 🙂',
-  date: new Date('2023-01-01').toISOString().substring(0, 10),
-  startDate: new Date('2022-01-01').toISOString().substring(0, 10),
+  date: new Date('2024-01-01').toISOString().substring(0, 10),
+  startDate: new Date('2023-01-01').toISOString().substring(0, 10),
 };
 
 const Home: NextPage = () => {
