@@ -24,8 +24,8 @@ export default function handler(
   switch (keyword) {
     case 'new-year':
       text = 'New Year 🙂';
-      date = '2025-01-01';
-      startDate = '2024-01-01';
+      date = '2026-01-01';
+      startDate = '2025-01-01';
     default:
   }
 
